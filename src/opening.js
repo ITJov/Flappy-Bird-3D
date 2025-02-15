@@ -76,6 +76,7 @@ function init() {
   const startButton = new Box3D(
     scene,
     loader,
+    
     [240, 20, 100],
     {
       map: loader.load("src/assets/textures/text_texture.jpeg"),

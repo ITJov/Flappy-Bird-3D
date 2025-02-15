@@ -14,10 +14,10 @@ export default class Text3D {
 
     loadFont(callback) {
         const textLoader = new FontLoader();
-        textLoader.load(
-            '/fonts/helvetiker_regular.typeface.json',  // Pastikan path benar
-            callback,
-            undefined,
+		textLoader.load(
+			'https://threejs.org/examples/fonts/helvetiker_regular.typeface.json',
+			callback,            
+			undefined,
             (error) => console.error("Error loading font:", error)
         );
     }
