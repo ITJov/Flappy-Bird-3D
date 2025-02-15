@@ -1,4 +1,4 @@
-import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.136/examples/jsm/loaders/GLTFLoader.js";
+import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@latest/examples/jsm/loaders/GLTFLoader.js";
 
 export default class Mountain {
     loadMountain(scene) {
