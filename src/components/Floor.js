@@ -21,7 +21,7 @@ export default class Floor {
 
   initFloor() {
     const textureLoader = new THREE.TextureLoader();
-    this.rockyTexture = textureLoader.load("./assets/textures/rocky_texture.jpg");
+    this.rockyTexture = textureLoader.load("src/assets/textures/rocky_texture.jpg");
     this.rockyTexture.wrapS = this.rockyTexture.wrapT = THREE.RepeatWrapping;
     this.rockyTexture.repeat.set(50, 50);
 
@@ -46,7 +46,7 @@ export default class Floor {
   loadTreeModel() {
     const loader = new GLTFLoader();
     loader.load(
-      "./assets/models/quiver_tree_02_1k.gltf",
+      "src/assets/models/quiver_tree_02_1k.gltf",
       (gltf) => {
         this.treeModel = gltf.scene;
         //area awal (2 batch)

@@ -8,7 +8,7 @@ let scene, camera, renderer;
 // Cek apakah halaman telah diakses sebelumnya
 if (!localStorage.getItem("fromMain")) {
 	// Jika tidak, kembalikan ke halaman openning.html
-	window.location.href = "opening.html";
+	window.location.href = "/opening.html";
   } else {
 	// Jika ya, hapus status untuk mencegah reload kembali ke openning.html
 	localStorage.removeItem("fromMain");
@@ -45,7 +45,7 @@ function init() {
 		'meadow_dn',
 		'meadow_rt',
 		'meadow_lf',
-	].map((name) => loader.load(`./assets/skyBox/${name}.jpg`));
+	].map((name) => loader.load(`src/assets/skyBox/${name}.jpg`));
 
 	textures.forEach((texture) => {
 		materialArray.push(new THREE.MeshBasicMaterial({ map: texture }));
@@ -79,7 +79,7 @@ function init() {
 		loader,
 		[900, 20, 200],
 		{
-			map: loader.load('./assets/textures/text_texture.jpeg'),
+			map: loader.load('src/assets/textures/text_texture.jpeg'),
 			color: 0x555555,
 		},
 		[-30, 230, 0],
@@ -93,7 +93,7 @@ function init() {
 		loader,
 		[240, 20, 100],
 		{
-			map: loader.load('./assets/textures/text_texture.jpeg'),
+			map: loader.load('src/assets/textures/text_texture.jpeg'),
 			color: 0x555555,
 		},
 		[-200, -90, 0],
@@ -121,7 +121,7 @@ function init() {
 		loader,
 		[290, 20, 100],
 		{
-			map: loader.load('./assets/textures/text_texture.jpeg'),
+			map: loader.load('src/assets/textures/text_texture.jpeg'),
 			color: 0x555555,
 		},
 		[150, -90, 0],
@@ -160,9 +160,9 @@ function init() {
 			const clickedObject = intersects[0].object;
 			if (clickedObject === restartButton.mesh) {
 				localStorage.setItem('fromOpening', 'true');
-				window.location.href = 'index.html';
+				window.location.href = './index.html';
 			} else if (clickedObject === menuButton.mesh) {
-				window.location.href = 'opening.html';
+				window.location.href = '/opening.html';
 			}
 		}
 	});

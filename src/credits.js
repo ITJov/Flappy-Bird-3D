@@ -26,7 +26,7 @@ function init() {
 	controls.maxDistance = 1500;
 
 	// audio
-	const audio = new AudioHelper(camera, "/src/assets/audios/Opening-Flappy Bird.mp3", {
+	const audio = new AudioHelper(camera, "src/assets/audios/Opening-Flappy Bird.mp3", {
 		loop: true,
 		volume: 0.5,
 		autoplay: true,
@@ -44,7 +44,7 @@ function init() {
 		'meadow_dn',
 		'meadow_rt',
 		'meadow_lf',
-	].map((name) => loader.load(`./assets/skyBox/${name}.jpg`));
+	].map((name) => loader.load(`src/assets/skyBox/${name}.jpg`));
 
 	textures.forEach((texture) => {
 		materialArray.push(new THREE.MeshBasicMaterial({ map: texture }));
@@ -143,7 +143,7 @@ function init() {
 		loader,
 		[1050, 20, 750],
 		{
-			map: loader.load('./assets/textures/text_texture.jpeg'),
+			map: loader.load('src/assets/textures/text_texture.jpeg'),
 			color: 0x555555,
 		},
 		[0, -0, 0],
@@ -157,7 +157,7 @@ function init() {
 		loader,
 		[240, 20, 100],
 		{
-			map: loader.load('./assets/textures/text_texture.jpeg'),
+			map: loader.load('src/assets/textures/text_texture.jpeg'),
 			color: 0x555555,
 		},
 		[-700, 350, 0],
@@ -192,7 +192,7 @@ function init() {
 		if (intersects.length > 0) {
 			const clickedObject = intersects[0].object;
 			if (clickedObject === backButton.mesh) {
-				window.location.href = 'opening.html';
+				window.location.href = '/opening.html';
 			}
 		}
 	});

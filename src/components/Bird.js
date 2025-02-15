@@ -20,7 +20,7 @@ export default class Bird {
 
   loadBird() {
     const loader = new GLTFLoader();
-    loader.load("./assets/objects/phoenix_bird.glb", (gltf) => {
+    loader.load("src/assets/objects/phoenix_bird.glb", (gltf) => {
       this.bird = gltf.scene;
       this.bird.position.set(0, 0, 0);
 
@@ -149,6 +149,6 @@ export default class Bird {
     }
     this.scoreManager.resetScore();
     localStorage.setItem("fromMain", "true");
-    window.location.replace("ending.html");
+    window.location.replace("../../ending.html");
   }
 }

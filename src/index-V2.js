@@ -14,7 +14,7 @@ import Floor from "./components/floor.js";
 // Cek apakah halaman telah diakses sebelumnya
 if (!localStorage.getItem("fromOpening")) {
   // Jika tidak, kembalikan ke halaman openning.html
-  window.location.href = "opening.html";
+  window.location.href = "/opening.html";
 } else {
   // Jika ya, hapus status untuk mencegah reload kembali ke openning.html
   localStorage.removeItem("fromOpening");
@@ -43,7 +43,7 @@ new Floor(scene, world);
 new SkyBox(scene);
 
 // set audio
-const audio = new AudioHelper(camera, "/src/assets/audios/backsound_squid_game.mp3", {
+const audio = new AudioHelper(camera, "src/assets/audios/backsound_squid_game.mp3", {
   loop: true,
   volume: 0.5,
   autoplay: true,
@@ -54,10 +54,10 @@ const keyboard = new KeyboardHelper();
 
 // PIPA
 const textureLoader = new THREE.TextureLoader();
-const barkColorTexture = textureLoader.load("./assets/textures/Bark014_1K-PNG_Color.png");
-const barkAOTexure = textureLoader.load("./assets/textures/Bark014_1K-PNG_AmbientOcclusion.png");
-const barkRoughnessTexture = textureLoader.load("./assets/textures/Bark014_1K-PNG_Roughness.png");
-const barkNormalTexture = textureLoader.load("./assets/textures/Bark014_1K-PNG_NormalGL.png");
+const barkColorTexture = textureLoader.load("src/assets/textures/Bark014_1K-PNG_Color.png");
+const barkAOTexure = textureLoader.load("src/assets/textures/Bark014_1K-PNG_AmbientOcclusion.png");
+const barkRoughnessTexture = textureLoader.load("src/assets/textures/Bark014_1K-PNG_Roughness.png");
+const barkNormalTexture = textureLoader.load("src/assets/textures/Bark014_1K-PNG_NormalGL.png");
 const barkMaterial = new THREE.MeshStandardMaterial({
   map: barkColorTexture,
   aoMap: barkAOTexure,

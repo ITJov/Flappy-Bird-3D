@@ -30,7 +30,7 @@ function init() {
   let materialArray = [];
   let loader = new THREE.TextureLoader();
 
-  let textures = ["meadow_ft", "meadow_bk", "meadow_up", "meadow_dn", "meadow_rt", "meadow_lf"].map((name) => loader.load(`./assets/skyBox/${name}.jpg`));
+  let textures = ["meadow_ft", "meadow_bk", "meadow_up", "meadow_dn", "meadow_rt", "meadow_lf"].map((name) => loader.load(`src/assets/skyBox/${name}.jpg`));
 
   textures.forEach((texture) => {
     materialArray.push(new THREE.MeshBasicMaterial({ map: texture }));
@@ -64,7 +64,7 @@ function init() {
     loader,
     [900, 20, 200],
     {
-      map: loader.load("./assets/textures/text_texture.jpeg"),
+      map: loader.load("src/assets/textures/text_texture.jpeg"),
       color: 0x555555,
     },
     [-30, 230, 0],
@@ -78,7 +78,7 @@ function init() {
     loader,
     [240, 20, 100],
     {
-      map: loader.load("./assets/textures/text_texture.jpeg"),
+      map: loader.load("src/assets/textures/text_texture.jpeg"),
       color: 0x555555,
     },
     [-200, -90, 0],
@@ -106,7 +106,7 @@ function init() {
     loader,
     [240, 20, 100],
     {
-      map: loader.load("./assets/textures/text_texture.jpeg"),
+      map: loader.load("src/assets/textures/text_texture.jpeg"),
       color: 0x555555,
     },
     [150, -90, 0],
@@ -139,9 +139,9 @@ function init() {
       const clickedObject = intersects[0].object;
       if (clickedObject === startButton.mesh) {
         localStorage.setItem("fromOpening", "true");
-        window.location.href = "index.html";
+        window.location.href = "../index.html";
       } else if (clickedObject === creditsButton.mesh) {
-        window.location.href = "credits.html";
+        window.location.href = "../credits.html";
       }
     }
   });
