@@ -1,15 +1,15 @@
 import * as CANNON from "cannon-es";
 import * as THREE from "three";
-import Controls from "./components/Controls.js";
-import Lights from "./components/Lights.js";
-import SkyBox from "./components/SkyBox.js";
-import Pipe from "./components/Pipe.js";
-import Bird from "./components/Bird.js";
-import KeyboardHelper from "./components/keyboard.js";
-import AudioHelper from "./components/Audio.js";
-import Score from "./components/Score.js";
-import Mountain from "./components/Mountain.js";
-import Floor from "./components/Floor.js";
+import Controls from "src/components/Controls.js";
+import Lights from "src/components/Lights.js";
+import SkyBox from "src/components/SkyBox.js";
+import Pipe from "src/components/Pipe.js";
+import Bird from "src/components/Bird.js";
+import KeyboardHelper from "src/components/keyboard.js";
+import AudioHelper from "src/components/Audio.js";
+import Score from "src/components/Score.js";
+import Mountain from "src/components/Mountain.js";
+import Floor from "src/components/Floor.js";
 
 // Cek apakah halaman telah diakses sebelumnya
 if (!localStorage.getItem("fromOpening")) {
