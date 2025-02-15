@@ -1,5 +1,5 @@
 import * as CANNON from "cannon-es";
-import { GLTFLoader } from "../../node_modules/three/examples/jsm/loaders/GLTFLoader.js";
+import { GLTFLoader } from "../../node_modules/three/examples/jsm/loaders/GLTFLoader";
 import { Clock, AnimationMixer } from "three";
 
 export default class Bird {
