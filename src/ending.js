@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls.js';
+import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.136/examples/jsm/controls/OrbitControls.js";
 import Text3D from './components/Text3D.js';
 import Box3D from './components/Box3D.js';
 

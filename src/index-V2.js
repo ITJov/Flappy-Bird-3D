@@ -14,7 +14,7 @@ import Floor from "./components/Floor.js";
 // Cek apakah halaman telah diakses sebelumnya
 if (!localStorage.getItem("fromOpening")) {
   // Jika tidak, kembalikan ke halaman openning.html
-  window.location.href = "/opening.html";
+  window.location.href = "./opening.html";
 } else {
   // Jika ya, hapus status untuk mencegah reload kembali ke openning.html
   localStorage.removeItem("fromOpening");
