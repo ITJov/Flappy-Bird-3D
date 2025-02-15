@@ -192,7 +192,7 @@ function init() {
 		if (intersects.length > 0) {
 			const clickedObject = intersects[0].object;
 			if (clickedObject === backButton.mesh) {
-				window.location.href = '/opening.html';
+				window.location.href = './opening.html';
 			}
 		}
 	});

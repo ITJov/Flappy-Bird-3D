@@ -76,7 +76,7 @@ function init() {
   const startButton = new Box3D(
     scene,
     loader,
-    
+
     [240, 20, 100],
     {
       map: loader.load("src/assets/textures/text_texture.jpeg"),
@@ -140,9 +140,9 @@ function init() {
       const clickedObject = intersects[0].object;
       if (clickedObject === startButton.mesh) {
         localStorage.setItem("fromOpening", "true");
-        window.location.href = "../index.html";
+        window.location.href = "./index.html";
       } else if (clickedObject === creditsButton.mesh) {
-        window.location.href = "../credits.html";
+        window.location.href = "./credits.html";
       }
     }
   });
