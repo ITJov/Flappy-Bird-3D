@@ -142,7 +142,7 @@ function init() {
         localStorage.setItem("fromOpening", "true");
         window.location.href = "./index.html";
       } else if (clickedObject === creditsButton.mesh) {
-        window.location.href = "./credits.html";
+        window.location.href = "/credits.html";
       }
     }
   });

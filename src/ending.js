@@ -162,7 +162,7 @@ function init() {
 				localStorage.setItem('fromOpening', 'true');
 				window.location.href = './index.html';
 			} else if (clickedObject === menuButton.mesh) {
-				window.location.href = '/opening.html';
+				window.location.href = './opening.html';
 			}
 		}
 	});
